@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gituseranilprubyapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gituseranilprubyapp
+  template:
+    metadata:
+      labels:
+        app: gituseranilprubyapp 
+    spec:
+      containers:
+        - name: gituseranilprubyapp 
+          image: azccr1.azurecr.io/gituseranilprubyapp
+          ports:
+          - containerPort: 3000
